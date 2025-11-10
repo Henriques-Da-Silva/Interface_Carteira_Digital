@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  padding: 10px 20px;
+  padding: 10px 30px;
   width: 100%;
   height: 4rem;
   display: flex;
@@ -24,76 +24,15 @@ header {
   z-index: 10;
 }
 
-.logo {
-  height: 3em;
-}
-
-#btnMenu {
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 1rem;
-}
-
-#btnMenu:hover img {
-  filter: brightness(0.95);
-  border-radius: 0.5rem;
-  transition: 0.3s;
-}
-
-.principal {
-  display: flex;
-  flex-direction: row;
-  min-height: calc(100dvh - 4rem); 
+a{
+    text-decoration: none;
 }
 
 aside {
-  width: 13em;
-  background-color: white;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+    display: none;
 }
 
-.menuNav ul {
-  list-style: none;
-}
-
-.menuNav li {
-  margin-bottom: 1em;
-}
-
-.menuNav a {
-  color: #2a46e6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menuNav a:hover {
-  text-decoration: underline;
-  transition: 0.3s;
-}
-
-.container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2em;
-  background: linear-gradient(to top, #0c295e, #1b3d77, #486db3);
-}
-
-#text {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-#name {
-  color: #2a46e6;
-}
-
-input {
+input, #btnCadastrar {
   width: 100%;
   padding: 0.8em;
   border-radius: 1em;
@@ -106,13 +45,65 @@ input:focus {
   box-shadow: 0 0 6px #2a46e6;
 }
 
+.logo {
+  height: 3em;
+}
+
+#labelMenu {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menuNav {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding-left: 1.5em;
+    padding-right: .2em;
+}
+
+.link {
+    color: #2a46e6;
+    font-weight: bold;
+    padding: .5em;
+    border-radius: 1em;
+}
+
+.link:hover {
+    background-color: #979ec4;
+    transition: 0.3s;
+}
+
+.principal {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100dvh - 4rem); 
+  background-color: #ffffff;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: linear-gradient(to top, #0c295e, #1b3d77, #486db3);
+  border-top-left-radius: 1rem;
+}
+
+#text {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+#name {
+  color: #2a46e6;
+}
+
 #btnCadastrar {
-  width: 100%;
-  padding: 0.8em;
-  border-radius: 1em;
   background-color: #2a46e6;
   color: white;
-  font-size: 1em;
   cursor: pointer;
 }
 
@@ -121,45 +112,11 @@ input:focus {
   transition: 0.3s;
 }
 
-@media screen and (min-width: 768px) {
-    .tela_signUp {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        background-color: white;
-        gap: 1.5em;
-        width: 100%;
-        max-width: 27em;
-        padding: 2em;
-        box-shadow: 2px 2px 10px #131d55;
-        border-radius: 1.5em;
-        font-size: 1em;
-    }
-
+#menuCheck {
+    display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .principal {
-        flex-direction: column;
-  }
-
-  aside {
-        width: 100%;
-        box-shadow: none;
-        padding: 1em 2em;
-  }
-
-  .container {
-        padding: 1em;
-  }
-
-  .tela_signUp {
-        width: 100%;
-        margin: 0;
-        padding: 1.5em;
-        font-size: 0.95em;
+.tela_signUp {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -169,9 +126,54 @@ input:focus {
         gap: 1.5em;
         width: 100%;
         max-width: 27em;
-        padding: 2em;
         box-shadow: 2px 2px 10px #131d55;
         border-radius: 1.5em;
+}
+
+@media screen and (min-width: 770px) {
+    .tela_signUp {
+        padding: 2em;
         font-size: 1em;
-  }
+    }   
+    .AsideDesktop {
+        position: sticky;
+        top: 4rem;
+        height: calc(100dvh - 4rem);
+        width: 8em;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 1em 0;
+    }
+    .labelMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    #menuCheck:checked ~ .AsideMobile {
+        display: flex;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 9;
+        flex-direction: column;
+        padding: 1em 0;
+        border: 1px solid #ccc;
+    }
+
+    .container {
+            padding: 1em;
+            border-top-left-radius: 0;
+        }
+
+    .tela_signUp {
+            margin: 0;
+            padding: 1.5em;
+            font-size: 0.95em;
+        }
 }

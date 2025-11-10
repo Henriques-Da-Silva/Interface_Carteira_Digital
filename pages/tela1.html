@@ -9,22 +9,27 @@
 <body>
     <header class="header">
             <img src="../Assets/img/icon-small.png" alt="Logo Henry Bank" class="logo">
-            <button type="button" id="btnMenu">
+            <input type="checkbox" name="" id="menuCheck">
+            <label for="menuCheck" class="labelMenu">
                 <img src="../Assets/img/iconMenu.png" alt="MenuBurguer" class="logo">
-            </button>
+            </label>
+            <aside class="AsideMobile">
+                <nav class="menuNav">
+                    <a href="#"><p class="link">Login</p></a>
+                    <a href="#"><p class="link">Home</p></a>
+                    <a href="#"><p class="link">Sobre Nós</p></a>
+                </nav>
+            </aside>
     </header>
 
     <div class="principal">
-        <aside>
-            <nav class="menuNav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <aside class="AsideDesktop">
+                <nav class="menuNav">
+                    <a href="#"><p class="link">Login</p></a>
+                    <a href="#"><p class="link">Home</p></a>
+                    <a href="#"><p class="link">Sobre Nós</p></a>
+                </nav>
+            </aside>
         
         <main class="container">
             <form class="tela_signUp">
