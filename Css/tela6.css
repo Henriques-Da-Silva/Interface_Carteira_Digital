@@ -1,0 +1,72 @@
+.perfilCard {
+  background-color: white;
+  padding: 2em;
+  border-radius: 1.5em;
+  box-shadow: 2px 2px 10px #131d55;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.fotoPerfil {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2a46e6;
+  margin: 0 auto;
+}
+
+.nomeUsuario {
+  color: #2a46e6;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.infoUsuario {
+  color: rgb(1, 0, 73);
+  font-size: 1em;
+}
+
+.tipoConta {
+  font-weight: bold;
+  color: #486db3;
+}
+
+.btnEditar {
+  padding: 0.8em;
+  border-radius: 1em;
+  background-color: #2a46e6;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  width: auto;
+  height: auto;
+  transition: background-color 0.3s;
+}
+
+.btnEditar:hover {
+  background-color: #1a2c91;
+}
+
+@media screen and (max-width: 769px) {
+  .perfilCard {
+    padding: 1.5em;
+    gap: 0.8em;
+  }
+
+  .fotoPerfil {
+    width: 6.5em;
+    height: 6.5em;
+  }
+
+  .nomeUsuario {
+    font-size: 1.3em;
+  }
+
+  .infoUsuario {
+    font-size: 0.95em;
+  }
+}

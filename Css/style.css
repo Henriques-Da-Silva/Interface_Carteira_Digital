@@ -26,6 +26,11 @@ header {
 
 a{
     text-decoration: none;
+    color: #2a46e6;
+}
+
+.anchor:hover {
+    text-decoration: underline;
 }
 
 aside {
@@ -35,7 +40,7 @@ aside {
 input, #btnCadastrar {
   width: 100%;
   padding: 0.8em;
-  border-radius: 1em;
+  border-radius: 2em;
   background-color: #bac2e6;
   outline: 0;
   font-size: 1em;
@@ -101,6 +106,15 @@ input:focus {
   color: #2a46e6;
 }
 
+#login{
+  font-size: 2rem;
+  color: #2a46e6;
+  padding-bottom: .2em;
+  width: 100%;
+  border-radius: 10px;
+  border-bottom: 2px solid;
+}
+
 #btnCadastrar {
   background-color: #2a46e6;
   color: white;
@@ -130,6 +144,17 @@ input:focus {
         border-radius: 1.5em;
 }
 
+.back_para_Aside {
+    display: none;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100dvh - 4rem);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 8;
+}
+
 @media screen and (min-width: 770px) {
     .tela_signUp {
         padding: 2em;
@@ -151,7 +176,7 @@ input:focus {
 }
 
 @media screen and (max-width: 769px) {
-    #menuCheck:checked ~ .AsideMobile {
+    #menuCheck:checked ~ .AsideMobile{
         display: flex;
         position: absolute;
         top: 4rem;
@@ -164,6 +189,10 @@ input:focus {
         flex-direction: column;
         padding: 1em 0;
         border: 1px solid #ccc;
+    }
+
+    #menuCheck:checked ~ .back_para_Aside{
+        display: block;
     }
 
     .container {
