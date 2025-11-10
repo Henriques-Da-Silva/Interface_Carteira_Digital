@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: #f0f2f5;
+}
+
+header {
+  padding: 10px 20px;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 3em;
+}
+
+#btnMenu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+#btnMenu:hover img {
+  filter: brightness(0.95);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.principal {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100dvh - 4rem); 
+}
+
+aside {
+  width: 13em;
+  background-color: white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.menuNav ul {
+  list-style: none;
+}
+
+.menuNav li {
+  margin-bottom: 1em;
+}
+
+.menuNav a {
+  color: #2a46e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menuNav a:hover {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: linear-gradient(to top, #0c295e, #1b3d77, #486db3);
+}
+
+.tela_signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  gap: 1.5em;
+  width: 100%;
+  max-width: 27em;
+  padding: 2em;
+  box-shadow: 2px 2px 10px #131d55;
+  border-radius: 1.5em;
+  font-size: 1em;
+}
+
+#text {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+#name {
+  color: #2a46e6;
+}
+
+input {
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 1em;
+  background-color: #bac2e6;
+  outline: 0;
+  font-size: 1em;
+}
+
+input:focus {
+  box-shadow: 0 0 6px #2a46e6;
+}
+
+#btnCadastrar {
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 1em;
+  background-color: #2a46e6;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#btnCadastrar:hover {
+  background-color: #1a2c91;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .principal {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    box-shadow: none;
+    padding: 1em 2em;
+  }
+
+  .container {
+    padding: 1em;
+  }
+
+  .tela_signUp {
+    width: 100%;
+    margin: 0;
+    padding: 1.5em;
+    font-size: 0.95em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    gap: 1.5em;
+    width: 100%;
+    max-width: 27em;
+    padding: 2em;
+    box-shadow: 2px 2px 10px #131d55;
+    border-radius: 1.5em;
+    font-size: 1em;
+  }
+}
