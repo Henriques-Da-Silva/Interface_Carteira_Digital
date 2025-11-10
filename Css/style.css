@@ -84,22 +84,6 @@ aside {
   background: linear-gradient(to top, #0c295e, #1b3d77, #486db3);
 }
 
-.tela_signUp {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  background-color: white;
-  gap: 1.5em;
-  width: 100%;
-  max-width: 27em;
-  padding: 2em;
-  box-shadow: 2px 2px 10px #131d55;
-  border-radius: 1.5em;
-  font-size: 1em;
-}
-
 #text {
   font-size: 1.5em;
   margin-bottom: 0.5em;
@@ -137,38 +121,57 @@ input:focus {
   transition: 0.3s;
 }
 
+@media screen and (min-width: 768px) {
+    .tela_signUp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: white;
+        gap: 1.5em;
+        width: 100%;
+        max-width: 27em;
+        padding: 2em;
+        box-shadow: 2px 2px 10px #131d55;
+        border-radius: 1.5em;
+        font-size: 1em;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
   .principal {
-    flex-direction: column;
+        flex-direction: column;
   }
 
   aside {
-    width: 100%;
-    box-shadow: none;
-    padding: 1em 2em;
+        width: 100%;
+        box-shadow: none;
+        padding: 1em 2em;
   }
 
   .container {
-    padding: 1em;
+        padding: 1em;
   }
 
   .tela_signUp {
-    width: 100%;
-    margin: 0;
-    padding: 1.5em;
-    font-size: 0.95em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-color: white;
-    gap: 1.5em;
-    width: 100%;
-    max-width: 27em;
-    padding: 2em;
-    box-shadow: 2px 2px 10px #131d55;
-    border-radius: 1.5em;
-    font-size: 1em;
+        width: 100%;
+        margin: 0;
+        padding: 1.5em;
+        font-size: 0.95em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: white;
+        gap: 1.5em;
+        width: 100%;
+        max-width: 27em;
+        padding: 2em;
+        box-shadow: 2px 2px 10px #131d55;
+        border-radius: 1.5em;
+        font-size: 1em;
   }
 }
